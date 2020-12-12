@@ -1,0 +1,52 @@
+{
+    "name": "vedatbozkurt/task-management",
+    "description": "Laravel Task Management on Models",
+    "keywords": [
+        "vedatbozkurt",
+        "task-management"
+    ],
+    "homepage": "https://github.com/vedatbozkurt/task-management",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Vedat Bozkurt",
+            "email": "info@wedat.org",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "VedatBozkurt\\TaskManagement\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "VedatBozkurt\\TaskManagement\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "VedatBozkurt\\TaskManagement\\TaskManagementServiceProvider"
+            ],
+            "aliases": {
+                "TaskManagement": "VedatBozkurt\\TaskManagement\\TaskManagementFacade"
+            }
+        }
+    }
+}
